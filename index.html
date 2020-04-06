@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Github API</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="card" id="main-card">
+    <div class="main-card-content" id="main-card-content" >
+      <h1 class="text-center">Github</h1>
+      <input type="text" class="main-input" id="main-input" placeholder="Nome do Usuário"/>
+      <button type="button" class="main-button" id="main-button">Pesquisar</button>
+    </div>
+    <div class="user-details hidden d-none" id="user-details">
+      <div class="text-center">
+        <img id="user-img" alt="usuario x">
+      </div>
+      <div id="user-name"></div>
+      <div id="user-bio"></div>
+      <div class="d-flex justify-content-center">
+        <a href="#" target="_blank" id="user-url">
+          <div class="user-attributes">
+            <i class="fab fa-github"></i>
+          </div>
+        </a>
+      </div>
+      <h2 class="mt-3">Repositórios</h2>
+      <div class="custom-cards-container" id="repos-container">
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

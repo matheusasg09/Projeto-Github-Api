@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: rgb(61, 61, 61);
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-top: 100px;
+  background-color: white;
+  width: 20%;
+  min-height: 160px;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(63, 63, 63);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 12px #0000005e;
+  overflow: hidden;
+  transition: .5s;
+
+  animation-name: fadeInLeft;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+}
+
+.main-input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid gainsboro;
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  color: gray;
+
+  animation-name: slideInLeft;
+  animation-duration: .3s;
+  animation-delay: .1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.main-button {
+  padding: 10px 50px;
+  text-transform: uppercase;
+  background-color: #409bc5;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .2s;
+
+  animation-name: slideInLeft;
+  animation-duration: .3s;
+  animation-delay: .2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.main-button[disabled] {
+  background-color: #9cb1b9;
+  cursor: initial;
+}
+
+.main-button:not([disabled]):hover {
+  background-color: #367d9b;
+}
+
+.logo-container {
+  text-align: right;
+  padding-right: 40px;
+
+}
+
+.logo-github {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-top: -10px;
+  transform: rotate(-25deg);
+  
+  animation-name: scaleIn;
+  animation-duration: .3s;
+  animation-delay: .5s;
+  animation-timing-function: cubic-bezier(0.57, 0.03, 0.73, 1.74);
+  animation-fill-mode: backwards;
+}
+
+.main-card-content {
+  display: flex;
+  flex-direction: column; 
+  opacity: 1;
+  transition: .3s;
+  transition-delay: .3s;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: .5s;
+  opacity: 1;
+}
+
+.user-details.hidden {
+  opacity: 0;
+  transform: scale(.9);
+}
+
+#user-name {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+#user-img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.custom-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.custom-card {
+  max-width: 350px;
+  margin: 10px;
+  width: 350px;
+  text-align: left;
+  border: 1px solid lightgray;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.custom-card:hover{
+  background-color: #f8f9fa;
+}
+
+.user-attributes {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0) rotate(0);
+  }
+
+  to {
+    transform: scale(1) rotate(-25deg);
+  }
+}
